@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil Anggota - Kelompok 1</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="welcome" onload="playMusic()">
+  <audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/04/25/audio_c1f8c9c6f6.mp3?filename=8-bit-game-loop-142093.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="click-sound">
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_41d57c1e7d.mp3?filename=menu-select-110624.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="sky">
+    <div class="cloud" style="--i:1;"></div>
+    <div class="cloud" style="--i:2;"></div>
+    <div class="cloud" style="--i:3;"></div>
+  </div>
+
+  <div class="ground">
+    <img src="https://cdna.artstation.com/p/assets/images/images/024/414/460/original/ruben-van-zijst-wizard-idle-animation-1280x1280px.gif?1582326963" class="character" alt="Pixel Character">
+  </div>
+
+  <div class="overlay"></div>
+  <div class="container">
+    <h1>👾 Pilih Karakter - Kelompok 1 👾</h1>
+
+    <div class="grid">
+      <div class="card" onclick="openProfile('aditya.html')">
+        <img src="img7.jpg" class="avatar">
+        <h2>Aditya</h2>
+        <p>Sipaling Suka Olahraga.</p>
+      </div>
+
+      <div class="card" onclick="openProfile('Randhika.html')">
+        <img src="img1.jpg" class="avatar">
+        <h2>Randhika</h2>
+        <p>Sipaling Suka Pelajaran Produktif.</p>
+      </div>
+
+      <div class="card" onclick="openProfile('ribi.html')">
+        <img src="img2.jpg" class="avatar">
+        <h2>Ribi</h2>
+        <p>Sipaling Suka Tiktok an.</p>
+      </div>
+
+      <div class="card" onclick="openProfile('sarah.html')">
+        <img src="img6.jpg" class="avatar">
+        <h2>Sarah</h2>
+        <p>Sipaling Suka Live Tiktok.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="button glow" onclick="clickSound()">⬅ Kembali</a>
+  </div>
+
+  <script>
+    function playMusic() {
+      const music = document.getElementById("bg-music");
+      music.volume = 0.3;
+      music.play().catch(() => {
+        document.body.addEventListener('click', () => music.play(), { once: true });
+      });
+    }
+
+    function clickSound() {
+      const sound = document.getElementById("click-sound");
+      sound.currentTime = 0;
+      sound.play();
+    }
+
+    function openProfile(page) {
+      clickSound();
+      setTimeout(() => {
+        window.location.href = page;
+      }, 300);
+    }
+  </script>
+</body>
+</html>

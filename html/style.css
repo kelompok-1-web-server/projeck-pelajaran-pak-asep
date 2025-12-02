@@ -1,0 +1,149 @@
+/* ========== LATAR BELAKANG DUNIA PIXEL ========== */
+body.welcome {
+  background: linear-gradient(#6fd3ff, #b6e6ff 70%, #57c84d 70%);
+  overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+}
+
+/* langit pixel */
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to bottom, #6fd3ff 0%, #b6e6ff 100%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* awan */
+.cloud {
+  position: absolute;
+  top: calc(20% * var(--i));
+  width: 100px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveClouds calc(15s * var(--i)) linear infinite;
+}
+
+@keyframes moveClouds {
+  from { transform: translateX(-150px); }
+  to { transform: translateX(100vw); }
+}
+
+/* tanah pixel */
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: repeating-linear-gradient(
+    0deg,
+    #57c84d,
+    #57c84d 8px,
+    #4caf50 8px,
+    #4caf50 16px
+  );
+  overflow: hidden;
+  z-index: 1;
+}
+
+.character {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  image-rendering: pixelated;
+  animation: idleBounce 1.2s ease-in-out infinite;
+}
+
+/* animasi kecil seperti "napas" */
+@keyframes idleBounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+
+/* overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* konten di atas */
+.container {
+  position: relative;
+  z-index: 3;
+  padding: 50px 20px;
+}
+
+/* tombol pixel glow */
+.button.glow {
+  display: inline-block;
+  background: #ffcc00;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0 0 8px #fff9;
+  transition: all 0.2s;
+}
+.button.glow:hover {
+  background: #ffee00;
+  box-shadow: 0 0 20px #fff;
+}
+
+/* grid profil */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* kartu anggota */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+.card.large {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* avatar */
+.avatar {
+  width: 100px;
+  height: 100px;
+  image-rendering: pixelated;
+  margin-bottom: 15px;
+}
+
+/* tautan kontak */
+.links a {
+  margin: 0 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.links a:hover {
+  text-shadow: 0 0 8px #fff;
+}
