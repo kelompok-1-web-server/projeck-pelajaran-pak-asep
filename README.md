@@ -221,4 +221,4 @@ Seluruh proses pengerjaan telah direkam dan diunggah ke YouTube.
 
 [![Thumbnail Video Pengerjaan](https://i.ytimg.com/an_webp/tmgkfZbXk7w/mqdefault_6s.webp?du=3000&sqp=CMikw8kG&rs=AOn4CLCitEbNxO27eEjuW1uLHLn9q4Eb2A)](https://youtu.be/tmgkfZbXk7w?si=Tq5oQmpxXwi-I4pF)
 
-**PETUNJUK:** Ganti semua teks di dalam tanda kurung siku `[ ... ]` dengan informasi proyek yang relevan.
+
